@@ -12,7 +12,7 @@ dracoLoader.setDecoderPath( 'jsm/libs/draco/gltf/' );
 
 loader.setDRACOLoader( dracoLoader );
 
-loader.load( 'assets/LittlestTokyo.glb', function ( gltf ) {
+loader.load( 'assets/ferrari.glb', function ( gltf ) {
   console.log("here");
   scene.add( gltf.scene );
 }, undefined, function ( error ) {
