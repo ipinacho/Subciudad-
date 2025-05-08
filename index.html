@@ -1,20 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body, html{
-      margin: 0; padding:0; width: 100%; height: 100%;
-    }
-  </style>
+  <title>Subciudad</title>
 </head>
 <body>
+  <header>
+    <div class="header-container">
+      <nav class="menu">
+        <ul>
+          <li><a href="acercadeindex.html">Acerca de</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
   <main>
-    <h1>Mi titulo está aquí</h1>
-    <p>esto se refresca solo en la pantalla</p>
-    <script type="module" src="main.js"></script>
+    <img src="logosubciudad.svg" alt="Subciudad" class="logo" />
+    <h2 class="subtitle">Una mirada virtual hacia el hundimiento de la ciudad.</h2>
   </main>
+
+  <div class="svg-container">
+    <img src="capas.svg" alt="Descripción del SVG" class="svg-image">
+     <div class="hover-info">
+      <div class="hover-title">CAPA ALTIMÉTRICA</div>
+      <div class="hover-subtitle">Elevaciones y depresiones del terreno que definen el relieve visible de la ciudad.</div>
+      <a href="capa1index.html" class="hover-button">Más info</a>
+    </div>
+  </div>
+
+
+
+  <script type="module" src="main.js"></script>
+  <footer>
+    <div class="footer-container">
+      <img src="logosubciudad.svg" alt="Subciudad" class="footer-logo" />
+      <ul class="footer-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="acercadeindex.html">Acerca de</a></li>
+        <li><a href="nosotros.-index.html">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>

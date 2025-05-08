@@ -1,0 +1,373 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .header-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 87px;
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    transition: color 0.3s ease;
+  }
+  
+  .menu li a:hover {
+    color: #e2e3e5;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 188px; 
+    padding: 0 20px 40px 20px; 
+    
+  }
+  
+  .logo {
+    height: 62.13px;
+    width: auto;
+    margin-top: 90px; 
+    margin-bottom: 10px; 
+  }
+  
+  .subtitle {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  footer {
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    margin-top: 60px;
+  }
+  
+  .footer-container {
+    width: 100%;
+    padding-left: 65px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 400px;
+  }
+  
+  .footer-logo {
+    height: 72px;
+    width: auto;
+    align-self: flex-end;  
+
+  }
+  
+  .footer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .footer-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  .footer-menu li a:hover {
+    color: #e2e3e5;
+  }
+
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 128px;
+    text-align: center;
+  
+  
+  }
+
+  .logo2 {
+    height: 33.29px;
+    width: auto;
+    position: absolute;
+    left: 65px;
+    top: 120px;
+  } 
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 430px;
+    width: calc(100% - 500px);
+    margin-left: 500px;
+    margin-top: 120px;
+    margin-bottom: 300px;
+  }
+  
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+  }
+  
+  .info-title {
+    font-family: Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.1;
+  }
+  
+  .info-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+
+  .info-title2{
+    font-family: Helvetica, sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.1;
+  }
+
+
+  .info-section2 {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    width: calc(100% - 500px);
+    margin-left: 500px;
+    margin-top: 120px;
+    margin-bottom: 300px;
+  }
+  
+  .info-box2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+  }
+
+  .small-info-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px; 
+    row-gap: 80px;     
+    width: max-content;
+    margin-left: 500px;
+    margin-bottom: 200px;
+  }
+  
+  .small-info-box {
+    max-width: 300px;
+  }
+  
+  .small-info-title {
+    font-family: Helvetica, sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  .small-info-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+
+  .h1CAPAS {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+
+  .titulocapa {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    
+  }
+
+  .infocapa {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+
+  }
+
+  .info-boxcapa {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+  }
+  
+  .capa {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    align-self: flex-end;
+    margin-left: 10%; 
+  }
+
+  .sidebar-altitud {
+    position: absolute;
+    left: 65px;
+    top: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .info-box-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  
+  .altimetria-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 300px;
+  }
+  
+  .altimetria-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  
+  .altitud-box {
+    width: 250px;
+    flex-shrink: 0;
+    margin-top: 20px; 
+    margin-left: -500px; 
+  }
+  .altitud-title {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  
+  .altitud-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 2px; 
+  }
+
+  .svg-container {
+    position: relative;
+    display: inline-block; 
+  }
+  
+  .svg-image {
+    width: 100%;
+  }
+  
+  .capas {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    align-self: flex-end;
+    margin-left: 10%; 
+  }
+
+  .hover-info {
+    display: none; 
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    width: 250px; 
+  }
+  
+
+  .svg-container:hover .hover-info {
+    display: block; 
+  }
+  
+
+  .hover-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+
+  .hover-subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .hover-button {
+    display: inline-block;
+    background-color: #D5D5D5;
+    color: rgb(8, 8, 8);
+    padding: 10px 10px;
+    border-radius: 19px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
