@@ -52,7 +52,7 @@ window.addEventListener('resize', () => {
 
 const loader = new OBJLoader();
 
-loader.load( '/assets/Testarossa.obj',  ( obj ) =>{
+loader.load( '/assets/prueba.obj',  ( obj ) =>{
   console.log("here");
   model = obj;
 
