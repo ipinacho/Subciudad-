@@ -27,3 +27,7 @@ git push --set-upstream origin add-misfunciones
 - Crear un pull request en Github: [visita este sitio](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request)
 
 - Unir los cambios (merge) a la rama principal (main): [visita este sitio](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request#merging-a-pull-request)
+
+
+## Arrancar servidor
+- Para arrancar el serviror corre el comando `npm run dev` en la terminal de VSCode

@@ -52,10 +52,14 @@ window.addEventListener('resize', () => {
 
 const loader = new OBJLoader();
 
+<<<<<<< HEAD
 const textureloader = new THREE.TextureLoader();
 const textura = textureloader.load('SUBSIDENCIA-01.png');
 
 loader.load( '/assets/SUBSIDENCIA.obj',  ( obj ) =>{
+=======
+loader.load( '/assets/prueba.obj',  ( obj ) =>{
+>>>>>>> 462f904150b94b24b09484068ced587dc59db131
   console.log("here");
   model = obj;
 
