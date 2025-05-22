@@ -52,9 +52,20 @@ window.addEventListener('resize', () => {
 
 const loader = new OBJLoader();
 
-loader.load( '/assets/Testarossa.obj',  ( obj ) =>{
+const textureloader = new THREE.TextureLoader();
+const textura = textureloader.load('SUBSIDENCIA-01.png');
+
+loader.load( '/assets/SUBSIDENCIA.obj',  ( obj ) =>{
   console.log("here");
   model = obj;
+
+  model.traverse( function ( child ) {
+    if ( child.isMesh ) {
+   child.material = new THREE.MeshStandardMaterial( {map: textura} );
+   child.castShadow = true;
+   child.receiveShadow = true;
+    }
+    });
 
   const box = new THREE.Box3().setFromObject( model );
   const center = box.getCenter( new THREE.Vector3() );
@@ -76,8 +87,29 @@ loader.load( '/assets/Testarossa.obj',  ( obj ) =>{
   console.error( "pERR0R:", error );
 });
 
-
 function animate() {
   renderer.render( scene, camera );
 }
 renderer.setAnimationLoop( animate );
+
+const tiltContainer = document.querySelector('.tilt-container');
+  const tiltInner = tiltContainer.querySelector('.tilt-inner');
+
+  tiltContainer.addEventListener('mousemove', (e) => {
+    const rect = tiltContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 10;
+    const rotateY = (x - centerX) / 10;
+
+tiltInner.style.aspectRatio= '16/9';
+tiltInner.style.objectFit= 'cover';
+
+    tiltInner.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  tiltContainer.addEventListener('mouseleave', () => {
+    tiltInner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+  });
