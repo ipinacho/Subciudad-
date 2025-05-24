@@ -53,28 +53,28 @@ window.addEventListener('resize', () => {
 const loader = new OBJLoader();
 
 loader.load( '/assets/prueba.obj',  ( obj ) =>{
-  console.log("here");
-  model = obj;
+console.log("here");
+model = obj;
 
-  const box = new THREE.Box3().setFromObject( model );
-  const center = box.getCenter( new THREE.Vector3() );
-  const size = box.getSize( new THREE.Vector3() );
+const box = new THREE.Box3().setFromObject( model );
+const center = box.getCenter( new THREE.Vector3() );
+const size = box.getSize( new THREE.Vector3() );
 
-  model.position.x = -center.x;
-  model.position.y = -center.y;
-  model.position.z = -center.z;
+model.position.x = -center.x;
+model.position.y = -center.y;
+model.position.z = -center.z;
 
-  const maxDim = Math.max( size.x, size.y, size.z );
+const maxDim = Math.max( size.x, size.y, size.z );
 
-  if(maxDim > 5){
-    const scale = 5 / maxDim;
-    model.scale.set(scale, scale, scale);
-  }
+if(maxDim > 5){
+const scale = 5 / maxDim;
+model.scale.set(scale, scale, scale);
+ }
 
-  scene.add( model );
-}, undefined, function ( error ) {
-  console.error( "pERR0R:", error );
-});
+ scene.add( model );
+ }, undefined, function ( error ) {
+   console.error( "pERR0R:", error );
+ });
 
 
 function animate() {
