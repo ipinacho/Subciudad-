@@ -59,33 +59,35 @@ loader.load( '/assets/SUBSIDENCIA.obj',  ( obj ) =>{
   console.log("here");
   model = obj;
 
-  model.traverse( function ( child ) {
-    if ( child.isMesh ) {
-   child.material = new THREE.MeshStandardMaterial( {map: textura} );
-   child.castShadow = true;
-   child.receiveShadow = true;
-    }
-    });
+// un comentario
 
-  const box = new THREE.Box3().setFromObject( model );
-  const center = box.getCenter( new THREE.Vector3() );
-  const size = box.getSize( new THREE.Vector3() );
-
-  model.position.x = -center.x;
-  model.position.y = -center.y;
-  model.position.z = -center.z;
-
-  const maxDim = Math.max( size.x, size.y, size.z );
-
-  if(maxDim > 5){
-    const scale = 5 / maxDim;
-    model.scale.set(scale, scale, scale);
+model.traverse( function ( child ) {
+  if ( child.isMesh ) {
+  child.material = new THREE.MeshStandardMaterial( {map: textura} );
+  child.castShadow = true;
+  child.receiveShadow = true;
   }
+  });
 
-  scene.add( model );
-}, undefined, function ( error ) {
-  console.error( "pERR0R:", error );
-});
+const box = new THREE.Box3().setFromObject( model );
+const center = box.getCenter( new THREE.Vector3() );
+const size = box.getSize( new THREE.Vector3() );
+
+model.position.x = -center.x;
+model.position.y = -center.y;
+model.position.z = -center.z;
+
+const maxDim = Math.max( size.x, size.y, size.z );
+
+if(maxDim > 5){
+const scale = 5 / maxDim;
+model.scale.set(scale, scale, scale);
+ }
+
+ scene.add( model );
+ }, undefined, function ( error ) {
+   console.error( "pERR0R:", error );
+ });
 
 function animate() {
   renderer.render( scene, camera );
@@ -93,23 +95,25 @@ function animate() {
 renderer.setAnimationLoop( animate );
 
 const tiltContainer = document.querySelector('.tilt-container');
-  const tiltInner = tiltContainer.querySelector('.tilt-inner');
+const tiltInner = tiltContainer.querySelector('.tilt-inner');
 
-  tiltContainer.addEventListener('mousemove', (e) => {
-    const rect = tiltContainer.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = (y - centerY) / 10;
-    const rotateY = (x - centerX) / 10;
+/** 
+ * TODO: AJUSTAR EL TILT PARA QUE FUNCIONE CON OBJETOS 3D
+ * DEBE MOVER EL rotateX Y rotateY DEL OBJETO 3D
+*/
+// tiltContainer.addEventListener('mousemove', (e) => {
+//   const rect = tiltContainer.getBoundingClientRect();
+//   const x = e.clientX - rect.left;
+//   const y = e.clientY - rect.top;
+//   const centerX = rect.width / 2;
+//   const centerY = rect.height / 2;
+//   const rotateX = (y - centerY) / 10;
+//   const rotateY = (x - centerX) / 10;
+//   tiltInner.style.aspectRatio= '16/9';
+//   tiltInner.style.objectFit= 'cover';
+//   tiltInner.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+// });
 
-tiltInner.style.aspectRatio= '16/9';
-tiltInner.style.objectFit= 'cover';
-
-    tiltInner.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  tiltContainer.addEventListener('mouseleave', () => {
-    tiltInner.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  });
+// tiltContainer.addEventListener('mouseleave', () => {
+//   tiltInner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+// });

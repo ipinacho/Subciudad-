@@ -78,23 +78,15 @@ body, html {
     padding: 0;
     margin-top: 60px;
   }
-  
-  .footer-container {
-    width: 100%;
-    padding-left: 65px;
-    padding-bottom: 50px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 400px;
-  }
-  
-  .footer-logo {
-    height: 72px;
-    width: auto;
-    align-self: flex-end;  
 
-  }
+  
+ .footer-container {
+  width: 100%;
+  padding-left: 530px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: left; 
+}
   
   .footer-menu {
     list-style: none;
@@ -312,7 +304,7 @@ body, html {
     margin-top: 2px; 
   }
 
-  .svg-container {
+  /* .svg-container {
     position: relative;
     display: flex;
     flex-direction: row-reverse;
@@ -329,7 +321,7 @@ body, html {
     max-width: 100%;
     align-self: flex-end;
     margin-left: 20%; 
-  }
+  } */
 
   .hover-info {
     display: none; 
@@ -371,3 +363,14 @@ body, html {
   }
 
   
+.tilt-inner {
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(15deg) rotateY(10deg);
+  transition: transform 0.3s ease;
+}
+
+.svg-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
