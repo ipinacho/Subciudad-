@@ -56,6 +56,8 @@ loader.load( '/assets/prueba.obj',  ( obj ) =>{
   console.log("here");
   model = obj;
 
+  // un comentario
+
   model.traverse( function ( child ) {
     if ( child.isMesh ) {
    child.material = new THREE.MeshStandardMaterial( {map: textura} );
