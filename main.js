@@ -93,23 +93,25 @@ function animate() {
 renderer.setAnimationLoop( animate );
 
 const tiltContainer = document.querySelector('.tilt-container');
-  const tiltInner = tiltContainer.querySelector('.tilt-inner');
+const tiltInner = tiltContainer.querySelector('.tilt-inner');
 
-  tiltContainer.addEventListener('mousemove', (e) => {
-    const rect = tiltContainer.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = (y - centerY) / 10;
-    const rotateY = (x - centerX) / 10;
+/** 
+ * TODO: AJUSTAR EL TILT PARA QUE FUNCIONE CON OBJETOS 3D
+ * DEBE MOVER EL rotateX Y rotateY DEL OBJETO 3D
+*/
+// tiltContainer.addEventListener('mousemove', (e) => {
+//   const rect = tiltContainer.getBoundingClientRect();
+//   const x = e.clientX - rect.left;
+//   const y = e.clientY - rect.top;
+//   const centerX = rect.width / 2;
+//   const centerY = rect.height / 2;
+//   const rotateX = (y - centerY) / 10;
+//   const rotateY = (x - centerX) / 10;
+//   tiltInner.style.aspectRatio= '16/9';
+//   tiltInner.style.objectFit= 'cover';
+//   tiltInner.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+// });
 
-tiltInner.style.aspectRatio= '16/9';
-tiltInner.style.objectFit= 'cover';
-
-    tiltInner.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  tiltContainer.addEventListener('mouseleave', () => {
-    tiltInner.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  });
+// tiltContainer.addEventListener('mouseleave', () => {
+//   tiltInner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+// });
