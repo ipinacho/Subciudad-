@@ -52,13 +52,37 @@ window.addEventListener('resize', () => {
 
 const loader = new OBJLoader();
 
+<<<<<<< HEAD
+const textureloader = new THREE.TextureLoader();
+const textura = textureloader.load('SUBSIDENCIA-01.png');
+
+loader.load( '/assets/SUBSIDENCIA.obj',  ( obj ) =>{
+=======
 loader.load( '/assets/prueba.obj',  ( obj ) =>{
+<<<<<<< HEAD
 console.log("here");
 model = obj;
 
 const box = new THREE.Box3().setFromObject( model );
 const center = box.getCenter( new THREE.Vector3() );
 const size = box.getSize( new THREE.Vector3() );
+=======
+>>>>>>> 462f904150b94b24b09484068ced587dc59db131
+  console.log("here");
+  model = obj;
+
+  model.traverse( function ( child ) {
+    if ( child.isMesh ) {
+   child.material = new THREE.MeshStandardMaterial( {map: textura} );
+   child.castShadow = true;
+   child.receiveShadow = true;
+    }
+    });
+
+  const box = new THREE.Box3().setFromObject( model );
+  const center = box.getCenter( new THREE.Vector3() );
+  const size = box.getSize( new THREE.Vector3() );
+>>>>>>> b8446b642502aecb589f9500ee3c78e80119e930
 
 model.position.x = -center.x;
 model.position.y = -center.y;
@@ -76,8 +100,29 @@ model.scale.set(scale, scale, scale);
    console.error( "pERR0R:", error );
  });
 
-
 function animate() {
   renderer.render( scene, camera );
 }
 renderer.setAnimationLoop( animate );
+
+const tiltContainer = document.querySelector('.tilt-container');
+  const tiltInner = tiltContainer.querySelector('.tilt-inner');
+
+  tiltContainer.addEventListener('mousemove', (e) => {
+    const rect = tiltContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 10;
+    const rotateY = (x - centerX) / 10;
+
+tiltInner.style.aspectRatio= '16/9';
+tiltInner.style.objectFit= 'cover';
+
+    tiltInner.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  tiltContainer.addEventListener('mouseleave', () => {
+    tiltInner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+  });
