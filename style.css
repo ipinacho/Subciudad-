@@ -471,6 +471,27 @@ body, html {
   display: block;
 }
 
+.tooltip-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  color: black;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  pointer-events: none;
+  user-select: none;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  white-space: normal;
+  max-width: 350px;
+  word-wrap: break-word;
+}
+
 .grid-point:hover {
   background:transparent;
 }
