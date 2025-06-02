@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Subciudad</title>
+  <style>
+    /* Estilo para el punto */
+    .grid-point {
+      position: absolute;
+      top: 350px; /* Ajusta según necesidad */
+      left: 1000px; /* Ajusta según necesidad */
+      width: 20px;
+      height: 20px;
+      background-color:red;
+      border-radius: 0%;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+
+    .grid-point .tooltip-text {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 110%; /* justo a la derecha del punto */
+      transform: translateY(-50%);
+      color: black;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      white-space: nowrap;
+      font-family:  Helvetica, sans-serif;
+      font-size: 30px;
+      pointer-events: none;
+      user-select: none;
+      text-align: left;
+      padding: 20px;
+      border-radius: 10px;
+      color: rgb(0, 0, 0);
+      width: 250px; 
+      opacity: 100%;
+      background-color: antiquewhite;
+    }
+
+    /* Mostrar texto al hacer hover sobre el punto */
+    .grid-point:hover .tooltip-text {
+      display: block;
+    }
+  </style>
+
 </head>
-<body>
+<body class="body-capa">
   <header>
     <div class="header-container">
       <nav class="menu">
@@ -19,27 +62,56 @@
     </div>
   </header>
 
-  <main>
+  <main class="page-with-grid" style="position: relative;">
     <h1 class="h1CAPAS">CAPA <br> GEOLÓGICA</h1>
-    <img src="assets/Capas/GEOLOGICA.png" class="capa" />
-<a href="index.html">
-  <img src="logosubciudad.svg" alt="Subciudad" class="logo2" />
-</a> 
+    <img
+      src="assets/capa.geologica-01.png"
+      class="capa"
+      alt="Capa Geológica"
+    />
+    <a href="index.html">
+      <img src="logosubciudad.svg" alt="Subciudad" class="logo2" />
+    </a>
+
     <section class="altimetria-section">
-        <div class="altimetria-container">
-          
-              <div class="info-boxcapa">
-            <h2 class="titulocapa">EL SUBSUELO</h2>
-            <p class="infocapa">
-               El subsuelo de Miguel Hidalgo está conformado por una mezcla compleja de materiales: depósitos lacustres blandos y altamente compresibles, sedimentos aluviales más consolidados, zonas de roca ígnea fracturada y fallas geológicas activas. Esta diversidad geológica condiciona el comportamiento del terreno ante la extracción de agua subterránea, aumentando la vulnerabilidad estructural y acelerando los procesos de hundimiento diferencial.
-            </p>
-          </div>
-      
+      <div class="altimetria-container">
+        <div class="info-boxcapa">
+          <h2 class="titulocapa">EL SUBSUELO</h2>
+          <p class="infocapa">
+            El subsuelo de la Miguel Hidalgo está conformado por una mezcla compleja de materiales: depósitos lacustres blandos y altamente compresibles, sedimentos aluviales más consolidados, zonas de roca ígnea fracturada y fallas geológicas activas. Esta diversidad geológica condiciona el comportamiento del terreno ante la extracción de agua subterránea, aumentando la vulnerabilidad estructural y acelerando los procesos de hundimiento diferencial.
+          </p>
         </div>
-      </section>
-    
+      </div>
+    </section>
+
+   
+    <div class="grid-point" style="top: 350px; left: 1000px;">
+      <div class="hover-info">
+  <div class="hover-title">PARQUE BICENTENARIO</div>
+  <div class="hover-subtitle">19°28′11″N 99°11′49″O﻿ / ﻿19.469722222222, -99.196944444444</div>
+</div>
+
+<div class="grid-point" style="top: 180px; left: 320px;">
+      <div class="hover-info">
+  <div class="hover-title">ESCUELA SUPERIOR DE ECONOMÍA</div>
+  <div class="hover-subtitle">19°27′18″N 99°10′04″O﻿ / ﻿19.455, -99.16777778.</div>
+</div>
+
+<div class="grid-point" style="top: 40px; left: -40px;">
+      <div class="hover-info">
+  <div class="hover-title">UNIVERSIDAD DEL EJÉRCITO Y LA FUERZA</div>
+  <div class="hover-subtitle">19.449861, -99.171738</div>
+</div>
+
+<div class="grid-point" style="top: 350px; left: -400px;">
+      <div class="hover-info">
+  <div class="hover-title">AUDITORIO NACIONAL</div>
+  <div class="hover-subtitle">19°25′29″N 99°11′42″O﻿ / ﻿19.424722, -99.194917</div>
+</div>
+
+    </div>
   </main>
-  <script type="module" src="main.js"></script>
+
   <footer>
     <div class="footer-container">
       <ul class="footer-menu">

@@ -458,3 +458,35 @@ body, html {
   line-height: 1.1;
   align-self: flex-start; 
 }
+
+.page-with-grid {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-repeat: repeat;
+}
+
+.grid-point:hover .tooltip {
+  display: block;
+}
+
+.grid-point:hover {
+  background:transparent;
+}
+
+.grid-point:hover .hover-info {
+  display: block;
+  position: absolute;
+  opacity: 100%;
+  top: -110px;  /* Mueve la caja hacia arriba del punto */
+  left: 30px;   /* Mueve la caja a la derecha del punto */
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 20;
+}
+
+.hover-point:hover + .hover-info {
+  display: block;
+}
+
