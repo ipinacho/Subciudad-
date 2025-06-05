@@ -304,12 +304,10 @@ body, html {
     margin-top: 2px; 
   }
 
-  /* .svg-container {
+  .svg-container {
     position: relative;
-    display: flex;
-    flex-direction: row-reverse;
   }
-  
+  /*
   .svg-image {
     width: 70%;
   }
@@ -330,10 +328,14 @@ body, html {
     border-radius: 10px;
     color: rgb(0, 0, 0);
     width: 250px; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    left: 5%;
   }
   
 
-  .svg-container:hover .hover-info {
+  #contenedorsvgcapa1:hover #capa1 {
     display: block; 
   }
   
@@ -363,11 +365,14 @@ body, html {
   }
 
   
-.tilt-inner {
-  transform-style: preserve-3d;
-  transform: perspective(1000px) rotateX(15deg) rotateY(10deg);
-  transition: transform 0.3s ease;
-}
+  .tilt-container {
+    perspective: 1000px;
+  }
+  
+  .tilt-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
 
 .svg-image {
   width: 100%;
@@ -495,3 +500,4 @@ body, html {
   position: relative;
   width: 100%;
 }
+
