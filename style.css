@@ -491,3 +491,7 @@ body, html {
   display: block;
 }
 
+.contenedor-puntos {
+  position: relative;
+  width: 100%;
+}
