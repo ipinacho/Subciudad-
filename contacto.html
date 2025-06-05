@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <nav class="menu">
+        <ul>
+          <li><a href="acercadeindex.html">Acerca de</a></li>
+          <li><a href="nosotros.-index.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <a href="index.html">
+  <img src="logosubciudad.svg" alt="Subciudad" class="logo2" />
+</a> 
+
+<div class="container">
+  <div class="left-column">
+
+  </div>
+  <div class="right-column">
+    <h1 class="contact-title">CONTÁCTANOS</h1>
+    <form class="contact-form" id="contactForm">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+
+      <p class="success-message" id="successMessage">¡Gracias por contactarnos! Te responderemos pronto.</p>
+    </form>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-container">
+      <ul class="footer-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="acercadeindex.html">Acerca de</a></li>
+        <li><a href="nosotros.-index.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      successMessage.style.display = 'block';
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

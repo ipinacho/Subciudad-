@@ -374,10 +374,130 @@ body, html {
     transition: transform 0.3s ease;
   }
 
-  .svg-image {
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    width: 100%;
-    align-self: flex-end;
-    margin-left: 20%; 
-  }
+.svg-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact-form { 
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 150px; 
+  margin-bottom: 200px;
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+
+.contact-form button:hover {
+  opacity: 0.06;
+}
+
+
+.contact-section {
+  display: flex;
+  margin-top: 120px;
+  padding: 40px;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-left h2 {
+  font-size: 50pt;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+.contact-right {
+  flex: 1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: none; 
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+.contact-form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.success-message {
+  color: rgb(0, 0, 0);
+  display: none;
+}
+
+.contact-title {
+  font-family: Helvetica, sans-serif;
+  font-size: 46px;
+  font-weight: bold;
+  margin-top: 250px; 
+  margin-bottom: 20px;
+  line-height: 1.1;
+  align-self: flex-start; 
+}
+
+.page-with-grid {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-repeat: repeat;
+}
+
+.grid-point:hover .tooltip {
+  display: block;
+}
+
+
+.grid-point:hover {
+  background:transparent;
+}
+
+.grid-point:hover .hover-info {
+  display: block;
+  position: absolute;
+  opacity: 100%;
+  top: -110px;  /* Mueve la caja hacia arriba del punto */
+  left: 30px;   /* Mueve la caja a la derecha del punto */
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 20;
+}
+
+.hover-point:hover + .hover-info {
+  display: block;
+}
+
+.contenedor-puntos {
+  position: relative;
+  width: 100%;
+}
+
