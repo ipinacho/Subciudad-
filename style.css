@@ -306,7 +306,17 @@ body, html {
 
   .svg-container {
     position: relative;
+    align-self: flex-end;
+    width: 50%;
+    margin-left: 30%;
+    margin-bottom: 200px; /* este es el espaciado entre mapas */
   }
+
+  /* Esto hace que el tooltip se muestre al pasar por el mapa */
+.svg-container:hover .hover-info,
+.hover-info:hover {
+  display: block;
+}
   /*
   .svg-image {
     width: 70%;
@@ -321,18 +331,46 @@ body, html {
     margin-left: 20%; 
   } */
 
-  .hover-info {
-    display: none; 
-    text-align: left;
-    padding: 20px;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-    width: 250px; 
-    position: absolute;
-    top: 50%;
-    transform: translateY(50%);
-    left: 5%;
-  }
+
+.svg-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Punto rojo sobre el mapa */
+.hover-point {
+  position: absolute;
+  top: 40%; /* ajusta según lo necesites */
+  left: 35%; /* ajusta según lo necesites */
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 5;
+  display: none;
+}
+
+.hover-info {
+  display: none;
+  position: absolute;
+  top: 430px; /* Ajusta según donde lo quieras */
+  left: -20%;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  width: 250px;
+  border: 1px solid #ccc;
+  z-index: 20;
+  pointer-events: auto;
+
+/* Mostrar tooltip al pasar el mouse por el mapa */
+.tilt-inner:hover .hover-info,
+.hover-info:hover {
+  display: block;
+}
   
 
   #contenedorsvgcapa1:hover #capa1 {
@@ -370,8 +408,13 @@ body, html {
   }
   
   .tilt-inner {
+    position: relative;
     transform-style: preserve-3d;
     transition: transform 0.3s ease;
+  }
+  
+  .tilt-container:hover .tilt-inner {
+    transform: rotateX(3deg) rotateY(-3deg);
   }
 
 .svg-image {
@@ -501,3 +544,14 @@ body, html {
   width: 100%;
 }
 
+.map-overlay {
+  all: unset;                   /* Limpia todo estilo heredado */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;                  /* Tamaño deseado */
+  height: auto;                 /* Mantiene proporción */
+  z-index: 15;
+  pointer-events: none;
+  object-fit: contain;
+}

@@ -23,30 +23,78 @@
     <img src="logosubciudad.svg" alt="Subciudad" class="logo" />
     <h2 class="subtitle">Una mirada virtual hacia el hundimiento de la ciudad.</h2>
   </main>
-  
-  <div class="svg-container tilt-container" style="position: relative;">
-    <div class="tilt-inner">
-      <img src="assets/SUBSIDENCIA.png" alt="Capa Subsidencia" class="svg-image">
-    </div>
 
+ <!-- CAPA SUBSIDENCIA -->
+<div class="svg-container tilt-container">
+  <img src="assets/mapa subsidencia.png" alt="Capa Subsidencia" class="svg-image">
 
-    <div class="hover-point" style="
-  position: absolute;
-  top: 200px;
-  left: 250px;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-">
+  <!-- ✅ Hover-info correctamente contenido -->
+  <div class="hover-info">
+    <div class="hover-title">CAPA SUBSIDENCIA</div>
+    <div class="hover-subtitle">Deformaciones del subsuelo que anticipan zonas propensas al hundimiento y al colapso estructural.</div>
+    <a href="capa-02.html" class="hover-button">Más info</a>
+  </div>
 </div>
 
-<div class="hover-info">
-  <div class="hover-title">CAPA ALTIMÉTRICA</div>
-  <div class="hover-subtitle">Elevaciones y depresiones del terreno que definen el relieve visible de la ciudad.</div>
-  <a href="capa-01..html" class="hover-button">Más info</a>
+  <!-- CAPA GEOTÉCNICA -->
+  <div class="svg-container tilt-container">
+    <div class="tilt-inner">
+      <img src="assets/mapa geotécnica.png" alt="Capa Geotécnica" class="svg-image">
+    </div>
+    <div class="hover-info">
+      <div class="hover-title">CAPA GEOTÉCNICA</div>
+      <div class="hover-subtitle">Composición y resistencia del subsuelo que determinan su respuesta ante hundimientos y sismos.</div>
+      <a href="capa-05.html" class="hover-button">Más info</a>
+    </div>
+  </div>
+
+  <!-- CAPA HIDROLÓGICA -->
+  <div class="svg-container tilt-container">
+    <div class="tilt-inner">
+      <img src="assets/mapa hidrológica.png" alt="Capa Hidrológica" class="svg-image">
+    </div>
+    <div class="hover-info">
+      <div class="hover-title">CAPA HIDROLÓGICA</div>
+      <div class="hover-subtitle">Presencia de ríos con implicaciones estructurales.</div>
+      <a href="capa-03.html" class="hover-button">Más info</a>
+    </div>
+  </div>
+
+  <!-- CAPA GEOLÓGICA -->
+  <div class="svg-container tilt-container">
+    <div class="tilt-inner">
+      <img src="assets/mapa geologica.png" alt="Capa Geológica" class="svg-image">
+    </div>
+    <div class="hover-info">
+      <div class="hover-title">CAPA GEOLÓGICA</div>
+      <div class="hover-subtitle">Distribución de sedimentos, rocas volcánicas y fallas estructurales.</div>
+      <a href="capa-04.html" class="hover-button">Más info</a>
+    </div>
+  </div>
+
+</div>
+
+    <div class="hover-point" style="
+      position: absolute;
+      top: 200px;
+      left: 250px;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;">
+    </div>
+  </div>
+
+  <!-- Tooltip fuera del tilt-inner -->
+  <div class="hover-info">
+    <div class="hover-title">CAPA SUBSIDENCIA</div>
+    <div class="hover-subtitle">
+      Elevaciones y depresiones del terreno que definen el relieve visible de la ciudad.
+    </div>
+    <a href="capa-01..html" class="hover-button">Más info</a>
+  </div>
 </div>
 
   <footer>
