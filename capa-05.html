@@ -20,34 +20,59 @@
   </header>
 
   <main>
-    <img src="logosubciudad.svg" alt="Subciudad" class="logo2" />
-    <h1 class="h1CAPAS">GEOTÉCNICA</h1>
-    <div class="svg-container tilt-container">
-      <!-- PNG fijo -->
-      <img src="assets/texto geotecnica.png" alt="Ícono decorativo"
-        style="all: unset; position: absolute; top: 20px; left: -230px;
-               width: 230px; height: auto; z-index: 20;
-               display: block; pointer-events: none; object-fit: contain;">
-    <div class="tilt-inner">
-      <img src="assets/mapa geotécnica.png" alt="Capa Geotécnica" class="svg-image">
-    </div>
+    <a href="index.html">  <img src="logosubciudad.svg" alt="Subciudad" class="logo2" /> </a>
+  
+   <h1 class="h1CAPAS">GEOTÉCNICA</h1>
 
-    <section class="altimetria-section">
-        <div class="altimetria-container">
-          
+    <!-- NUEVO CONTENEDOR FLEX -->
+    <div class="contenedor-columna-mapa">
       
-          <div class="info-boxcapa">
-            <h2 class="titulocapa">COMPORTAMIENTO MECÁNICO</h2>
-            <p class="infocapa">
-              El subsuelo está clasificado según su resistencia: desde el terreno firme (Zona I), pasando por la transición de resistencia media (Zona III), hasta los suelos blandos altamente deformables (Zona IIIA). Esta zonificación indica el grado de riesgo estructural ante hundimientos y sismos, marcando límites críticos para la seguridad constructiva.
-            </p>
-          </div>
-      
+      <!--COLUMNA DE TEXTO -->
+      <section class="capa-info-column">
+        <div class="info-item">
+          <h3>◼◼ DEPÓSITOS ALUVIALES</h3>
+          <p> Sedimentos porosos de grava, arena y limo que almacenan agua subterránea. Su explotación excesiva reduce la presión firme, compacta el suelo y genera hundimientos diferenciales de hasta 10 cm por año, afectando la estabilidad urbana. </p>
+        </div>
+
+        <div class="info-item">
+          <h3>◼ DEPÓSITO LACUSTRE</h3>
+          <p> Suelo blando y saturado, formado por sedimentos del antiguo lago. Al perder humedad por la extracción de agua, se compacta de forma irreversible, provocando hundimientos desiguales que ya dañan calles, tuberías y estructuras. </p>
+        </div>
+
+        <div class="info-item">
+          <h3>● ● ROCAS VOLCANOCLÁSTICAS</h3>
+          <p> Rocas volcánicas fracturadas que, pese a su aparente solidez, permiten deformaciones del terreno y afectan la estabilidad de las estructuras. </p>
+        </div>
+
+        <div class="info-item">
+          <h3>◼◼◼◼◼ FRACTURAS</h3>
+          <p> Fracturas en el subsuelo que debilitan su estructura y generan zonas inestables, propensas a hundimientos súbitos y desiguales con alto riesgo para la infraestructura urbana. </p>
         </div>
       </section>
-    
+
+      <!-- MAPA -->
+      <div class="svg-container tilt-container">
+        <div class="tilt-inner">
+          <img src="assets/mapa geotécnica.png" alt="Capa Geotécnica" class="svg-image">
+        </div>
+      </div>
+
+    </div> <!-- fin de contenedor flex -->
+
+    <section class="altimetria-section">
+      <div class="altimetria-container">
+        <div class="info-boxcapa">
+          <h2 class="titulocapa">COMPORTAMIENTO MECÁNICO</h2>
+          <p class="infocapa">
+            El subsuelo está clasificado según su resistencia: desde el terreno firme (Zona I), pasando por la transición de resistencia media (Zona III), hasta los suelos blandos altamente deformables (Zona IIIA). Esta zonificación indica el grado de riesgo estructural ante hundimientos y sismos, marcando límites críticos para la seguridad constructiva.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
+
   <script type="module" src="main.js"></script>
+
   <footer>
     <div class="footer-container">
       <ul class="footer-menu">
@@ -58,5 +83,10 @@
       </ul>
     </div>
   </footer>
+
+  <div class="boton-siguiente">
+    <a href="capa-03.html">Siguiente capa &gt;</a>
+  </div>
+
 </body>
 </html>

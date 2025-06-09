@@ -20,35 +20,71 @@
   </header>
 
   <main>
-    <img src="logosubciudad.svg" alt="Subciudad" class="logo2" />
-    <h1 class="h1CAPAS">GEOLOGÍA</h1>
+    <a href="index.html">  <img src="logosubciudad.svg" alt="Subciudad" class="logo2" /> </a>
+  
+   <h1 class="h1CAPAS">GEOLOGIA</h1>
 
-    <div class="svg-container tilt-container">
-      <!-- PNG fijo -->
-      <img src="assets/texto geologica.png" alt="Ícono decorativo"
-        style="all: unset; position: absolute; top: 20px; left: -230px;
-               width: 230px; height: auto; z-index: 20;
-               display: block; pointer-events: none; object-fit: contain;">
-    <div class="tilt-inner">
-      <img src="assets/mapa geologica.png" alt="Capa Geológica" class="svg-image">
-    </div>
+    <!-- NUEVO CONTENEDOR FLEX -->
+    <div class="contenedor-columna-mapa">
+      
+      <!--COLUMNA DE TEXTO -->
+      <section class="capa-info-column">
+        <div class="info-item">
+          <span style="font-size: 20px;">▛</span> ZONA FIRME O DE LOMAS
+          <p> Compuesta por materiales estables como rocas volcanicas y tobas, esta zona se considera apta para construir. Sin embargo su estabilidad depende del equilibrio hidrico subterraneo: el hundimiento es lento, silencioso y dificil de revertir.
+       </p>
+        </div>
+
+        <div class="info-item">
+          <span style="display:inline-block; font-weight: bold; font-size: 16px;">━<br>━</span> ZONA DE TRANSICIÓN
+          <p> Franja inestable entre suelos lacustres y formaciones firmes. La mezcla de materiales provoca subsidencia desigual e impredecible que compromete la seguridad estructural. </p>
+        </div>
+
+        <div class="info-item">
+          <span style="display:inline-block; width: 14px; height: 14px; border: 2px solid black; margin-right: 6px;"></span> ZONA I – TERRENO FIRME
+          <p>Cimentadas en suelos de alta rigidez, presentan una minima amplificacion sismica, pero el descenso del manto freatico provoca microfracturas que degradan su estabilidad.</p>
+        </div>
+
+        <div class="info-item">
+          <span style="display:inline-block; width: 14px; height: 14px; background-color: #999999; margin-right: 6px;"></span> ZONA II – TRANSICIÓN INTERMEDIA
+          <p>Son terrenos de resistencia media que amplifican moderadamente los sismos. La perdida de agua en el subsuelo provoca deformaciones que, combinadas con la actividad sismica, generan un riesgo acumulativo.</p>
+        </div>
+        
+        <div class="info-item">
+          <span style="display:inline-block; width: 14px; height: 14px; background-color: black; margin-right: 6px;"></span> ZONA IIIA – SUELO BLANDO
+          <p>Una zona de maxima amplificacion sismica. El suelo lacustre, blando y comprensible, se hunde al perder agua y responde violentamente a sismos, lo que puede causar colapsos incluso ante movimientos moderados.</p>
+        </div>
+
+       
+      </section>
+
+      
+        
+      </section>
+
+      <!-- MAPA -->
+      <div class="svg-container tilt-container">
+        <div class="tilt-inner">
+          <img src="assets/mapa geologica.png" alt="Capa Geotécnica" class="svg-image">
+        </div>
+      </div>
+
+    </div> <!-- fin de contenedor flex -->
 
     <section class="altimetria-section">
-        <div class="altimetria-container">
-  
-
-          <div class="info-boxcapa">
-            <h2 class="titulocapa"> EL SUBSUELO</h2>
-            <p class="infocapa">
-              El subsuelo de la Miguel Hidalgo está conformado por una mezcla compleja de materiales: depósitos lacustres blandos y altamente compresibles, sedimentos aluviales más consolidados, zonas de roca ígnea fracturada y fallas geológicas activas. Esta diversidad geológica condiciona el comportamiento del terreno ante la extracción de agua subterránea, aumentando la vulnerabilidad estructural y acelerando los procesos de hundimiento diferencial.
-            </p>
-          </div>
-      
+      <div class="altimetria-container">
+        <div class="info-boxcapa">
+          <h2 class="titulocapa">EL SUBSUELO</h2>
+          <p class="infocapa">
+            El subsuelo de la Miguel Hidalgo está conformado por una mezcla compleja de materiales: depósitos lacustres blandos y altamente compresibles, sedimentos aluviales más consolidados, zonas de roca ígnea fracturada y fallas geológicas activas. Esta diversidad geológica condiciona el comportamiento del terreno ante la extracción de agua subterránea, aumentando la vulnerabilidad estructural y acelerando los procesos de hundimiento diferencial.
+          </p>
         </div>
-      </section>
-    
+      </div>
+    </section>
   </main>
+
   <script type="module" src="main.js"></script>
+
   <footer>
     <div class="footer-container">
       <ul class="footer-menu">
@@ -58,6 +94,7 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
+
   </footer>
 </body>
 </html>

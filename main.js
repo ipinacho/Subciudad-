@@ -31,14 +31,6 @@ controls.enableZoom = true;
 controls.enablePan = true;
 controls.enableRotate = true;
 
-// Grid helper
-const gridHelper = new THREE.GridHelper(10, 10);
-scene.add(gridHelper);
-
-// Axes helper
-const axesHelper = new THREE.AxesHelper(5);
-scene.add(axesHelper);
-
 // Handle window resize
 window.addEventListener('resize', () => {
   const width = window.innerWidth;
@@ -88,6 +80,8 @@ model.scale.set(scale, scale, scale);
  }, undefined, function ( error ) {
    console.error( "pERR0R:", error );
  });
+
+ renderer.domElement.remove();
 
 function animate() {
   renderer.render( scene, camera );

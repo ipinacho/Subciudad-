@@ -112,8 +112,6 @@ body, html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 128px;
     text-align: center;
-  
-  
   }
 
   .logo2 {
@@ -122,7 +120,6 @@ body, html {
     position: absolute;
     left: 65px;
     top: 120px;
-    
   } 
 
 .logo2:hover {
@@ -226,7 +223,6 @@ body, html {
     font-family: Helvetica, sans-serif;
     font-size: 40px;
     font-weight: bold;
-    
   }
 
   .infocapa {
@@ -234,7 +230,6 @@ body, html {
     font-family: Helvetica, sans-serif;
     font-size: 20px;
     font-weight: normal;
-
   }
 
   .info-boxcapa {
@@ -306,10 +301,9 @@ body, html {
 
   .svg-container {
     position: relative;
-    align-self: flex-end;
-    width: 50%;
-    margin-left: 30%;
-    margin-bottom: 200px; /* este es el espaciado entre mapas */
+    width: 65%;
+    margin-left: 0;
+    margin-bottom: 200px;
   }
 
   /* Esto hace que el tooltip se muestre al pasar por el mapa */
@@ -355,7 +349,7 @@ body, html {
   display: none;
   position: absolute;
   top: 430px; /* Ajusta según donde lo quieras */
-  left: -20%;
+  right: -50%;
   text-align: left;
   padding: 20px;
   border-radius: 10px;
@@ -365,6 +359,7 @@ body, html {
   border: 1px solid #ccc;
   z-index: 20;
   pointer-events: auto;
+}
 
 /* Mostrar tooltip al pasar el mouse por el mapa */
 .tilt-inner:hover .hover-info,
@@ -389,7 +384,6 @@ body, html {
     font-size: 18px;
     margin-bottom: 20px;
   }
-  
   
   .hover-button {
     display: inline-block;
@@ -441,12 +435,9 @@ body, html {
   font-weight: bold;
 }
 
-
-
 .contact-form button:hover {
   opacity: 0.06;
 }
-
 
 .contact-section {
   display: flex;
@@ -507,6 +498,7 @@ body, html {
   align-self: flex-start; 
 }
 
+
 .page-with-grid {
   background-image:
     linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
@@ -528,8 +520,8 @@ body, html {
   display: block;
   position: absolute;
   opacity: 100%;
-  top: -110px;  /* Mueve la caja hacia arriba del punto */
-  left: 30px;   /* Mueve la caja a la derecha del punto */
+  top: -110px;  
+  left: 30px;   
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   z-index: 20;
@@ -545,13 +537,72 @@ body, html {
 }
 
 .map-overlay {
-  all: unset;                   /* Limpia todo estilo heredado */
+  all: unset;                
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 80px;                  /* Tamaño deseado */
-  height: auto;                 /* Mantiene proporción */
+  width: 80px;                  
+  height: auto;               
   z-index: 15;
   pointer-events: none;
   object-fit: contain;
 }
+
+.contact-title2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 46px;
+  font-weight: bold;
+  margin-top: 250px; 
+  margin-bottom: 20px;
+  line-height: 1.1;
+  align-self: flex-start; 
+  background-color: gray;
+}
+
+.contenedor-columna-mapa {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 100px;
+  padding: 0 5%;
+  gap: 80px;
+}
+
+.capa-info-column {
+  max-width: 500px;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.capa-info-column .info-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.capa-info-column .info-item p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.boton-siguiente {
+  text-align: right;
+  margin: 60px 5% 100px 0;
+}
+
+.boton-siguiente a {
+  font-family: Helvetica, sans-serif;
+  font-size: 14pt;
+  color: black;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.boton-siguiente a:hover {
+  opacity: 0.2;
+}
+

@@ -20,40 +20,68 @@
   </header>
 
   <main>
-    <img src="logosubciudad.svg" alt="Subciudad" class="logo2" />
-    <h1 class="h1CAPAS">CAPA DE <br> HIDROGRAFÍA</h1>
+    <a href="index.html">  <img src="logosubciudad.svg" alt="Subciudad" class="logo2" /> </a>
+  
+   <h1 class="h1CAPAS">HIDROLOGIA</h1>
 
-    <img src="assets/texto hidrologica.png" alt="Ícono decorativo"
-     style="all: unset; position: absolute; top: 20px; left: -230px;
-            width: 230px; height: auto; z-index: 20;
-            display: block; pointer-events: none; object-fit: contain;">
+    <!-- NUEVO CONTENEDOR FLEX -->
+    <div class="contenedor-columna-mapa">
+      
+      <!--COLUMNA DE TEXTO -->
+      <section class="capa-info-column">
+        <div class="info-item">
+          <h3>RIO BARRILACO</h3>
+          <p> Cauce natural entubado que impide la infiltración de agua, disminuyendo la recarga del acuífero y acelerando el hundimiento del suelo. </p>
+        </div>
 
-    <div class="svg-container tilt-container">
-     <!-- PNG fijo -->
-     <img src="assets/texto hidrologica.png" alt="Ícono decorativo"
-     style="all: unset; position: absolute; top: 20px; left: -230px;
-            width: 230px; height: auto; z-index: 20;
-            display: block; pointer-events: none; object-fit: contain;">
-    <div class="tilt-inner">
-      <img src="assets/mapa hidrológica.png" alt="Capa Hidrológica" class="svg-image">
-    </div>
+        <div class="info-item">
+          <h3>RIO TECAMACHALCO</h3>
+          <p> Río entre la Miguel Hidalgo y Naucalpan, casi invisible por su entubamiento, que eliminó su función de recarga natural, agravando el vaciamiento del subsuelo y la subsidencia en la zona poniente. </p>
+        </div>
 
-    <section class="altimetria-section">
-        <div class="altimetria-container">
-      
-      
-          <div class="info-boxcapa">
-            <h2 class="titulocapa">REDES DE SUPERFICIE</h2>
-            <p class="infocapa">
-              Los ríos que atraviesan la Miguel Hidalgo forman parte de una red de escurrimientos que conecta zonas altas con drenajes mayores. Estas corrientes han sido encauzadas, cubiertas o alteradas, reduciendo su capacidad de infiltración. Su traza influye en la dinámica del subsuelo, el comportamiento hidráulico del terreno y el riesgo de inundaciones.
-            </p>
-          </div>
-      
+        <div class="info-item">
+          <h3>RIO DOLORES</h3>
+          <p> Fue crucial para el suministro de agua en épocas prehispánicas y coloniales, pero hoy su cauce forma parte del drenaje. Se extrae agua del subsuelo y se expulsa la lluvia sin permitir su infiltración, causando grietas, colapsos y el hundimiento de la ciudad. </p>
+        </div>
+
+        <div class="info-item">
+          <h3>DRENAJE PROFUNDO: INTERCEPTOR PONIENTE Y CENTRO–PONIENTE</h3>
+          <p> Los colectores de aguas residuales evitan inundaciones, pero extraen agua sin permitir su recarga, acelerando la subsidencia. Cauces naturales como el del río poniente y el río Tecamachalco, ahora entubados, han perdido su función de infiltración, agravando el hundimiento en la zona poniente. </p>
+        </div>
+
+        <div class="info-item">
+          <h3>L. TEXCOCO Y L. ZUMPANGO</h3>
+          <p> La Miguel Hidalgo está en la antigua cuenca lacustre de Texcoco y Zumpango, que regulaba el agua y recargaba el acuífero. Hoy, cubierta de concreto y drenajes, conserva suelos saturados y sensibles a la extracción de agua. </p>
         </div>
       </section>
-    
+
+      
+        
+      </section>
+
+      <!-- MAPA -->
+      <div class="svg-container tilt-container">
+        <div class="tilt-inner">
+          <img src="assets/mapa hidrológica.png" alt="Capa Geotécnica" class="svg-image">
+        </div>
+      </div>
+
+    </div> <!-- fin de contenedor flex -->
+
+    <section class="altimetria-section">
+      <div class="altimetria-container">
+        <div class="info-boxcapa">
+          <h2 class="titulocapa">REDES DE SUPERFICIE</h2>
+          <p class="infocapa">
+            Los ríos que atraviesan la Miguel Hidalgo forman parte de una red de escurrimientos que conecta zonas altas con drenajes mayores. Estas corrientes han sido encauzadas, cubiertas o alteradas, reduciendo su capacidad de infiltración. Su traza influye en la dinámica del subsuelo, el comportamiento hidráulico del terreno y el riesgo de inundaciones.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
+
   <script type="module" src="main.js"></script>
+
   <footer>
     <div class="footer-container">
       <ul class="footer-menu">
@@ -64,5 +92,10 @@
       </ul>
     </div>
   </footer>
+
+  <div class="boton-siguiente">
+    <a href="capa-04.html">Siguiente capa &gt;</a>
+  </div>
+
 </body>
 </html>

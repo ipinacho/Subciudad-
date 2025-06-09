@@ -1,48 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="style.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subciudad</title>
-  <style>
-    .grid-point {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-color: rgb(197, 3, 3);
-      border-radius: 0%;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    .grid-point .tooltip-text {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 110%;
-      transform: translateY(-50%);
-      color:  rgb(197, 3, 3);
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      white-space: nowrap;
-      font-family: Helvetica, sans-serif;
-      font-size: 30px;
-      pointer-events: none;
-      user-select: none;
-      text-align: left;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-      background-color: rgba(255, 255, 255, 0.7);
-    }
-
-    .grid-point:hover .tooltip-text {
-      display: block;
-    }
-  </style>
 </head>
-
-<body class="body-capa">
+<body>
   <header>
     <div class="header-container">
       <nav class="menu">
@@ -55,174 +19,37 @@
     </div>
   </header>
 
-  <main class="page-with-grid" style="position: relative;">
-    <h1 class="h1CAPAS">SUBSIDENCIA</h1>
-    <div class="svg-container tilt-container">
-      <!-- PNG fijo -->
-      <img src="assets/texto subsidencia.png" alt="Ícono decorativo"
-        style="all: unset; position: absolute; top: 20px; left: -230px;
-               width: 230px; height: auto; z-index: 20;
-               display: block; pointer-events: none; object-fit: contain;">
-    <div class="tilt-inner">
-      <img src="assets/mapa subsidencia.png" alt="Capa Subsidencia" class="svg-image">
-  </div>
-    </div>
-    <!--<div class="contenedor-puntos"> 
-   <img src="assets/capa.subsidencia-01.svg" class="capa" alt="Capa Geológica" />
-<!-- Puntos interactivos con tooltip individual -->
-   <!--  <div class="grid-point" style="top: 350px; left: 1000px;">
-      <div class="tooltip-text">
-        <div class="hover-title">PARQUE BICENTENARIO</div>
-        <div class="hover-subtitle">19.467629, -99.195975</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 500px; left: 1300px;">
-      <div class="tooltip-text">
-        <div class="hover-title">ESCUELA SUPERIOR  <br> DE ECONOMÍA</div>
-        <div class="hover-subtitle">19.454179, -99.167159</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 600px; left: 1200px;">
-      <div class="tooltip-text">
-        <div class="hover-title">UNIVERSIDAD DEL EJÉRCITO <br> Y LA FUERZA</div>
-        <div class="hover-subtitle">19.449861, -99.171738</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 900px; left: 800px;">
-      <div class="tooltip-text">
-        <div class="hover-title">AUDITORIO NACIONAL</div>
-        <div class="hover-subtitle">19.424958, -99.194186</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 800px; left: 650px;">
-      <div class="tooltip-text">
-        <div class="hover-title">HIPÓDROMO <br>DE LAS AMÉRICAS</div>
-        <div class="hover-subtitle">19.437834, -99.221816</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 1150px; left: 700px;">
-      <div class="tooltip-text">
-        <div class="hover-title">PARQUE DE CHAPULTEPEC III</div>
-        <div class="hover-subtitle">19.396771, -99.220866</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 1100px; left: 1000px;">
-      <div class="tooltip-text">
-        <div class="hover-title">CASA LUIS BARRAGÁN</div>
-        <div class="hover-subtitle">19.411096, -99.192720</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 1070px; left: 950px;">
-      <div class="tooltip-text">
-        <div class="hover-title">MUTEC</div>
-        <div class="hover-subtitle">19.413595, -99.193771</div>
-      </div>
-    </div>
-
-     <div class="grid-point" style="top: 1030px; left: 1030px;">
-      <div class="tooltip-text">
-        <div class="hover-title">RESIDENCIA OFICIAL <BR> DE LOS PINOS </BR></div>
-        <div class="hover-subtitle">19.415406, -99.190965</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 1000px; left: 1100px;">
-      <div class="tooltip-text">
-        <div class="hover-title">CASTILLO <BR> DE CHAPULTEPEC </BR>
-        </BR></div>
-        <div class="hover-subtitle">19.420544, -99.181794</div>
-      </div>
-    </div>
-
-<div class="grid-point" style="top: 900px; left: 1150px;">
-      <div class="tooltip-text">
-        <div class="hover-title">MUSEO DE <BR> ARTE MODERNO </BR>
-        </BR></div>
-        <div class="hover-subtitle">19.423004, -99.179528 </div>
-      </div>
-    </div> 
-
-    <div class="grid-point" style="top: 900px; left: 1080px;">
-      <div class="tooltip-text">
-        <div class="hover-title">LAGO DE </BR> CHAPULTEPEC
-        </BR></div>
-        <div class="hover-subtitle">19.423178, -99.185388</div>
-      </div>
-    </div> 
-
-    <div class="grid-point" style="top: 1000px; left: 900px;">
-      <div class="tooltip-text">
-        <div class="hover-title"> LOMAS DE VIRREYES </div>
-        <div class="hover-subtitle">19.424958, -99.194186</div>
-      </div>
-    </div>
-
-    <div class="grid-point" style="top: 870px; left: 1080px;">
-      <div class="tooltip-text">
-        <div class="hover-title"> MUSEO DE </BR> ANTROPOLOGÍA
-        </BR></div>
-        <div class="hover-subtitle">19.426327, -99.186708</div>
-      </div>
-</div> 
-
-  <div class="grid-point" style="top: 1160px; left: 400px;">
-      <div class="tooltip-text">
-        <div class="hover-title"> BOSQUES DE </BR> LAS LOMAS </BR></div>
-        <div class="hover-subtitle">19.387725, -99.255479</div>
-      </div>
-</div> 
-
-<div class="grid-point" style="top: 750px; left: 950px;">
-      <div class="tooltip-text">
-        <div class="hover-title"> POLANCO</div>
-        <div class="hover-subtitle">19.431976, -99.205763</div>
-      </div>
-</div> 
-
-<div class="grid-point" style="top: 1150px; left: 1050px;">
-      <div class="tooltip-text">
-        <div class="hover-title"> TACUBAYA</div>
-        <div class="hover-subtitle">19.403065, -99.188002</div>
-      </div>
-</div> 
-
-
-<div class="grid-point" style="top: 650px; left: 1000px;">
-      <div class="tooltip-text">
-        <div class="hover-title"> GRANADA</div>
-        <div class="hover-subtitle">19.443596, -99.183795</div>
-      </div>
-</div> 
-
-<div class="grid-point" style="top: 550px; left: 800px;">
-      <div class="tooltip-text">
-        <div class="hover-title">PANTEÓN AMERICANO</div>
-        <div class="hover-subtitle">19.458422, -99.201732</div>
-      </div>
-</div> 
-
-     <div class="grid-point" style="top: 900px; left: 1000px;">
-      <div class="tooltip-text">
-        <div class="hover-title">ZOOLÓGICO </BR>  DE CHAPULTEPEC
-        </BR></div>
-        <div class="hover-subtitle">19.423047, -99.189611</div>
-      </div>
-
--->
-    </div>
-
+  <main>
+    <a href="index.html">  <img src="logosubciudad.svg" alt="Subciudad" class="logo2" /> </a>
   
-   
-    <a href="index.html">
-      <img src="logosubciudad.svg" alt="Subciudad" class="logo2" />
-    </a>
+   <h1 class="h1CAPAS">SUBSIDENCIA</h1>
+
+    <!-- NUEVO CONTENEDOR FLEX -->
+    <div class="contenedor-columna-mapa">
+      
+      <!--COLUMNA DE TEXTO -->
+      <section class="capa-info-column">
+        <div class="info-item">
+          <h3>◼ RIESGO MAYOR </h3>
+          <p> Área de hundimiento acelerado por compactación extrema del subsuelo. Puede descender hasta 40cm al año, dañando calles, viviendas y redes hidráulicas, con mayor impacto en zonas densamente </p>
+        </div>
+
+        <div class="info-item">
+          <h3><span style="color: #999999;">◼</span> RIESGO MENOR </h3>
+          <p> Zonas de hundimiento lento, con descensos menores a 10cm por año. Aunque más estables, siguen asentadas sobre sedimentos blandos y requieren monitoreo continuo ante el riesgo latente de agravamiento.</p>
+        </div>
+
+      
+      </section>
+
+      <!-- MAPA -->
+      <div class="svg-container tilt-container">
+        <div class="tilt-inner">
+          <img src="assets/mapa subsidencia.png" alt="Capa Geotécnica" class="svg-image">
+        </div>
+      </div>
+
+    </div> <!-- fin de contenedor flex -->
 
     <section class="altimetria-section">
       <div class="altimetria-container">
@@ -234,9 +61,9 @@
         </div>
       </div>
     </section>
-
-
   </main>
+
+  <script type="module" src="main.js"></script>
 
   <footer>
     <div class="footer-container">
@@ -248,5 +75,10 @@
       </ul>
     </div>
   </footer>
+
+  <div class="boton-siguiente">
+    <a href="capa-05.html">Siguiente capa &gt;</a>
+  </div>
+
 </body>
 </html>
