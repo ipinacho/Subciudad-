@@ -95,22 +95,32 @@ const tiltInner = tiltContainer.querySelector('.tilt-inner');
  * TODO: AJUSTAR EL TILT PARA QUE FUNCIONE CON OBJETOS 3D
  * DEBE MOVER EL rotateX Y rotateY DEL OBJETO 3D
 */
-tiltContainer.addEventListener('mousemove', (e) => {
-  const rect = tiltContainer.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  const centerX = rect.width / 2;
-  const centerY = rect.height / 2;
 
-  const percentX = (x - centerX) / centerX;
-  const percentY = (y - centerY) / centerY;
+console.log("main js")
+tiltContainer.addEventListener('click', (e) => {
+  console.log("click"); 
 
-  const rotateX = percentY * 15;
-  const rotateY = percentX * 15;
 
-  tiltInner.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-});
 
-tiltContainer.addEventListener('mouseleave', () => {
-  tiltInner.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
-});
+})
+
+
+// tiltContainer.addEventListener('mousemove', (e) => {
+//   const rect = tiltContainer.getBoundingClientRect();
+//   const x = e.clientX - rect.left;
+//   const y = e.clientY - rect.top;
+//   const centerX = rect.width / 2;
+//   const centerY = rect.height / 2;
+
+//   const percentX = (x - centerX) / centerX;
+//   const percentY = (y - centerY) / centerY;
+
+//   const rotateX = percentY * 15;
+//   const rotateY = percentX * 15;
+
+//   tiltInner.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+// });
+
+// tiltContainer.addEventListener('mouseleave', () => {
+//   tiltInner.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+// });

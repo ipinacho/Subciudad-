@@ -307,10 +307,10 @@ body, html {
   }
 
   /* Esto hace que el tooltip se muestre al pasar por el mapa */
-.svg-container:hover .hover-info,
+/* .svg-container:hover .hover-info,
 .hover-info:hover {
   display: block;
-}
+} */
   /*
   .svg-image {
     width: 70%;
@@ -605,3 +605,6 @@ body, html {
   opacity: 0.2;
 }
 
+.tilt-active{
+  display:block
+}
